@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+    <%- include('./utilities/stylesheet_inclusion'); %>
+</head>
+
+<body class="bg-black muli">
+<%- include('./utilities/navbar_signup'); %>
+
+
+
+<div id="main-div">
+    <div id="signup-box">
+        <ul>
+            <% if (typeof errors != 'undefined') { %>
+                <% errors.forEach(function(error){ %>
+                    <li><%= error.message %></li>
+                <% }); %>
+            <% } %>
+        </ul>
+        <form action="/users/signup" method="POST">
+            <div id="signup-box-inner">
+            <div>
+                <h2>Name</h2>
+                <input id="name" name="name" placeholder="Name" type="text" required/>
+            </div>
+            <div>
+                <h2>Email</h2>
+                <input id="email" name="email" placeholder="Email" type="email" required/>
+            </div>
+            <div>
+                <h2>Password</h2>
+                <input id="password" name="password" placeholder="Password" type="password" required/>
+            </div>
+            <div>
+                <h2>Enter your password again</h2>
+                <input id="password2" name="password2" placeholder="Confirm Password" type="password" required/>
+            </div>
+            <div>
+                <input class="submit" type="submit" value="Sign Up"/>
+            </div>
+                <a href="/users/login" class="form-switch-link">Already registered? Login here</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include('./utilities/footer'); %>
+<%- include('./utilities/scripts_inclusion'); %>
+</body>
+
+</html>

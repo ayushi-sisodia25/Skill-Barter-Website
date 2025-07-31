@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/signup.css">
+    <%- include('./utilities/stylesheet_inclusion'); %>
+</head>
+
+<body class="bg-black muli">
+<%- include('./utilities/navbar_login'); %>
+
+
+
+<div id="main-div">
+    <div id="signup-box">
+        <div style="margin-left: 12%;">
+        <ul>
+            <% if (messages.success_msg) { %>
+                <li>
+                    <%= messages.success_msg %>
+                </li>
+            <% } %>
+        </ul>
+
+        <ul>
+            <% if (messages.error) { %>
+                <li><%= messages.error %></li>
+            <% } %>
+        </ul>
+        </div>
+        <form action="/users/login" method="POST">
+            <div id="signup-box-inner">
+                <div>
+                    <h2>Email</h2>
+                    <input id="email" name="email" placeholder="Email" type="email" required/>
+                </div>
+                <div>
+                    <h2>Password</h2>
+                    <input id="password" name="password" placeholder="Password" type="password" required/>
+                </div>
+                <div>
+                    <input class="submit" type="submit" value="Log In"/>
+                </div>
+                <a href="/users/signup" class="form-switch-link">Not registered? Signup here</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include('./utilities/footer'); %>
+<%- include('./utilities/scripts_inclusion'); %>
+</body>
+
+</html>

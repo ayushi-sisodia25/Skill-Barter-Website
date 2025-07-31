@@ -1,0 +1,210 @@
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #240046, #5e5d5f);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+}
+
+.text-section {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #ffe066, #fcd770);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  color: #ffea94;
+  margin-bottom: 1rem;
+}
+
+.subtext {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 2rem;
+  max-width: 550px;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #ffe066;
+  color: #240046;
+  border: 2px solid #ffe066;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: #ffe066;
+  border-color: #ffe066;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: #3c096c;
+}
+
+.image-section {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr)); 
+  gap: 1.5rem;
+  justify-content: center; 
+  padding: 2rem;
+}
+.feature-card {
+  background: linear-gradient(135deg, #232334, #2e2e42);
+ padding: 2rem ;
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 500px;
+  height: auto;
+  gap: 0.5rem;
+
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.icon-wrapper.icon-yellow {
+  background-color: #facc15; 
+  box-shadow: 0 0 12px #facc15;
+}
+
+.icon-wrapper.icon-green {
+  background-color: #22c55e; 
+  box-shadow: 0 0 12px #22c55e;
+}
+
+.icon-wrapper.icon-blue {
+  background-color: #3b82f6; 
+  box-shadow: 0 0 12px #3b82f6;
+}
+
+.icon-wrapper.icon-pink {
+  background-color: #ec4899; 
+  box-shadow: 0 0 12px #ec4899;
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+.feature-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+
+
+
+.new-learning-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: black;
+}
+
+.learning-card {
+  width: 300px;
+  text-align: center;
+  color: white;
+}
+
+.learning-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.learning-text {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+}

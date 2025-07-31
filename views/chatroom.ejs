@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/chatroom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
+    <title>Skill Barter Chat</title>
+    <%- include('./utilities/stylesheet_inclusion'); %>
+    </head>
+
+<body class="bg-black muli">
+<%- include('./utilities/navbar_dashboard'); %>
+
+<div id="message-container">
+    </div>
+
+<form id="send-container" action="">
+    <input id="message-input" type="text" autocomplete="off" placeholder="Type your message..." />
+    <button id="send-button" type="submit">Send</button>
+</form>
+
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<script>
+    var socket = io();
+    console.log(socket);
+
+    
+    var messageContainer = document.getElementById('message-container'); 
+    var sendContainer = document.getElementById('send-container');      
+    var messageInput = document.getElementById('message-input');         
+
+
+ 
+    sendContainer.addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        if (messageInput.value) { 
+           
+            socket.emit('chat message', messageInput.value);
+            messageInput.value = '';
+            messageInput.focus();   
+        }
+    });
+
+    
+    socket.on('chat message', function(msg) {
+       
+        var messageItem = document.createElement('div');
+        messageItem.textContent = msg;
+        messageItem.classList.add('message-item');
+
+    
+
+        messageContainer.appendChild(messageItem); 
+        messageContainer.scrollTop = messageContainer.scrollHeight;
+    });
+</script>
+<%- include('./utilities/scripts_inclusion'); %>
+</body>
+</html>

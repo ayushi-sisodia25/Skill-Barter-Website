@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Barter</title>
+  <%- include('./utilities/stylesheet_inclusion'); %>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="bg-black muli">
+<%- include('./utilities/navbar'); %>
+
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="text-section">
+      <h1><span>Barter Skills,</span><br><span>Grow Together</span></h1>
+      <p class="tagline">Unlock your potential. Find like-minded people.</p>
+      <p class="subtext">Discover passionate people ready to share and grow together.</p>
+      <div class="cta-buttons">
+        <a href="/users/signup" class="btn btn-primary">Get Started</a>
+        <a href="/features" class="btn btn-secondary">Explore Features</a>
+      </div>
+    </div>
+    <div class="image-section">
+      <img src="images/landing_page_images/logo.jpg" alt="People sharing skills" />
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="feature-grid">
+  <div class="feature-card">
+    <div class="icon-wrapper icon-yellow">
+      <i data-feather="briefcase" class="feature-icon"></i>
+    </div>
+    <h4 class="feature-heading">Discover Skills</h4>
+    <p class="feature-text">Browse a growing list of skills shared by real people in the community. Whether you're curious or focused, there's something for you to explore.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrapper icon-green">
+      <i data-feather="cpu" class="feature-icon"></i>
+    </div>
+    <h4 class="feature-heading">Connect with Experts</h4>
+    <p class="feature-text">Meet experienced mentors, hobbyists, and learners just like you. Make meaningful connections that help you grow.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrapper icon-blue">
+      <i data-feather="refresh-cw" class="feature-icon"></i>
+    </div>
+    <h4 class="feature-heading">Exchange Knowledge</h4>
+    <p class="feature-text">Share what you know and learn from others in return. Trade knowledge in a way that’s rewarding for both sides.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-wrapper icon-pink">
+      <i data-feather="trending-up" class="feature-icon"></i>
+    </div>
+    <h4 class="feature-heading">See What’s Trending</h4>
+    <p class="feature-text">Find out what skills are currently popular in the community. Get inspired and see what others are diving into right now.</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="new-learning-section">
+  <div class="learning-card">
+    <img src="images/landing_page_images/image1.jpg" alt="Creative Collaboration">
+    <p class="learning-text">
+      Creative Circles: Join hands with creators and makers to explore fresh ideas and build exciting projects together.
+    </p>
+  </div>
+
+  <div class="learning-card">
+    <img src="images/landing_page_images/image2.jpeg" alt="Mentorship Call">
+    <p class="learning-text">
+      Guided Mentorship: Learn from professionals with real-world experience and get personalized career advice.
+    </p>
+  </div>
+
+  <div class="learning-card">
+    <img src="images/landing_page_images/image3.png" alt="Skill Showcase">
+    <p class="learning-text">
+      Skill Showcase: Present your talents, receive feedback, and get inspired by others' creativity.
+    </p>
+  </div>
+</section>
+
+<!-- <%- include('./utilities/footer'); %> -->
+<%- include('./utilities/scripts_inclusion'); %>
+</body>
+
+</html>

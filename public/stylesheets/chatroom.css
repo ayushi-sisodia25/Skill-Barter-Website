@@ -1,0 +1,103 @@
+/* Import Google Fonts for Muli - it's good practice to have this at the very top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+/* General Body Styling */
+body {
+    margin: 0;
+    padding-bottom: 3rem; /* Keep padding at the bottom for scrollable content, as send-container is not fixed now */
+    font-family: 'Muli', sans-serif;
+    background-color: #f3eeee; /* Dark background */
+    color: #ffffff; /* White text for general content */
+    display: flex; /* Use flexbox to organize content vertically */
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Style the message container (div#message-container) */
+#message-container {
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    width: 1200px;
+    scroll-behavior: smooth;
+    max-width: 1200px; /* Maximum width for the chat area */
+    flex-grow: 1; /* Allow message container to take up available vertical space */
+    overflow-y: auto; /* Enable vertical scrolling if messages overflow */
+    background: #4e4444; /* Same as body background */
+    display: flex; /* Make it a flex container for messages */
+    flex-direction: column; /* Stack messages vertically */
+}
+
+/* Style individual chat messages within the container */
+.message-item {
+    padding: 10px 15px; /* Padding for each message bubble */
+    margin-bottom: 8px; /* Space between messages */
+    border-radius: 8px; /* Slightly rounded message bubbles */
+    max-width: 80%; /* Messages don't span full width */
+    word-wrap: break-word; /* Break long words */
+    color: #ffffff; /* Default text color for messages */
+}
+
+/* Styling for messages from current user (example: align right, different color) */
+/* You'll need server-side logic to determine if a message is 'sent' or 'received' and add these classes */
+/* For now, messages will appear generically */
+.message-item.sent {
+    background-color: #4CAF50; /* Green bubble for sent messages */
+    margin-left: auto; /* Push to right */
+    color: #121212; /* Dark text on green background */
+}
+.message-item.received {
+    background-color: #333; /* Darker grey for received messages */
+    margin-right: auto; /* Push to left */
+    color: #ffffff;
+}
+
+/* Style the form container (the new #send-container) */
+#send-container {
+    max-width: 6000px; /* Maximum width of the form */
+    margin: 20px auto; /* Center the form and give some space from top and bottom */
+    padding: 10px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute space between elements */
+    background: #222; /* Dark background for the form */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Style the message input */
+#message-input {
+    flex-grow: 1; /* Let the input take up as much space as possible */
+    margin-right: 10px; /* Add some space between the input and the button */
+    padding: 10px; /* Padding inside the input */
+    border: none; /* Remove the default border */
+    border-radius: 5px; /* Rounded corners for the input */
+    background: #333; /* Slightly lighter background for the input */
+    color: #ddd; /* Color of the input text */
+}
+#message-input::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+/* Style the send button */
+#send-button {
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove the default border */
+    border-radius: 5px; /* Rounded corners for the button */
+    background: #4CAF50; /* A green background for the button */
+    color: white; /* White text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+#send-button:hover {
+    background-color: #45a049; /* Darken the button when hovering */
+}
+
+/* Basic responsiveness */
+@media (max-width: 768px) {
+    #send-container,
+    #message-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

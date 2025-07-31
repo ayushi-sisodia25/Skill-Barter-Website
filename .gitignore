@@ -1,0 +1,80 @@
+# Dependency directory
+/node_modules
+
+# Environment configuration
+.env
+
+# IDE and Editor folders
+.idea/
+*.code-workspace
+*.sublime-workspace
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build output directory
+/dist
+
+# Temporary files
+/temp
+
+# Other common ignore files
+*.swp
+*.swo
+*.tmp
+*.bak
+*.cache
+*.pbxuser
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.pyc
+
+# Dependency directories (comment out if you prefer to include in your repository)
+#bower_components
+#/jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env.test
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build output
+.nuxt
+
+# VuePress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
